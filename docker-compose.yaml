@@ -1,0 +1,10 @@
+services:
+  agent:
+    build: .
+    privileged: true
+    environment:
+      AZP_URL: ${AZP_URL}
+      AZP_TOKEN: ${AZP_TOKEN:-}
+      AZP_POOL: ${AZP_POOL:-}
+      AZP_AGENT_NAME: ${AZP_AGENT_NAME:-}
+      AGENT_ALLOW_RUNASROOT: 1
